@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?9c85d97a0d30521c0c1ac4b0b9b9e9de") format("truetype"),
+    url("./flaticon.woff?9c85d97a0d30521c0c1ac4b0b9b9e9de") format("woff"),
+    url("./flaticon.woff2?9c85d97a0d30521c0c1ac4b0b9b9e9de") format("woff2"),
+    url("./flaticon.eot?9c85d97a0d30521c0c1ac4b0b9b9e9de#iefix")
+      format("embedded-opentype"),
+    url("./flaticon.svg?9c85d97a0d30521c0c1ac4b0b9b9e9de#flaticon")
+      format("svg");
+  font-display: swap;
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-recommendation:before {
+  content: "\f101";
+}
+.flaticon-dashboard:before {
+  content: "\f102";
+}
+.flaticon-wallet:before {
+  content: "\f103";
+}
+.flaticon-stock-market:before {
+  content: "\f104";
+}
+.flaticon-wallet-1:before {
+  content: "\f105";
+}
+.flaticon-user:before {
+  content: "\f106";
+}
+.flaticon-bitcoin:before {
+  content: "\f107";
+}
+.flaticon-report:before {
+  content: "\f108";
+}
+.flaticon-support:before {
+  content: "\f109";
+}
+.flaticon-power-button:before {
+  content: "\f10a";
+}
+.flaticon-speech-bubble:before {
+  content: "\f10b";
+}
+.flaticon-cyber-security:before {
+  content: "\f10c";
+}
+.flaticon-exchange:before {
+  content: "\f10d";
+}
+.flaticon-right-arrow:before {
+  content: "\f10e";
+}
+.flaticon-left-arrow:before {
+  content: "\f10f";
+}
+.flaticon-user-1:before {
+  content: "\f110";
+}
+.flaticon-money:before {
+  content: "\f111";
+}
+.flaticon-mail:before {
+  content: "\f112";
+}
+.flaticon-bitcoin-symbol-inside-circulating-arrows:before {
+  content: "\f113";
+}
+.flaticon-money-1:before {
+  content: "\f114";
+}
+.flaticon-money-2:before {
+  content: "\f115";
+}
+.flaticon-changing-money:before {
+  content: "\f116";
+}
+.flaticon-bank-account:before {
+  content: "\f117";
+}
+.flaticon-trash-bin:before {
+  content: "\f118";
+}
+.flaticon-check:before {
+  content: "\f119";
+}
+.flaticon-close:before {
+  content: "\f11a";
+}
+.flaticon-moon:before {
+  content: "\f11b";
+}
+.flaticon-sun:before {
+  content: "\f11c";
+}
+.flaticon-hidden:before {
+  content: "\f11d";
+}
+.flaticon-visible:before {
+  content: "\f11e";
+}
+.flaticon-settings:before {
+  content: "\f11f";
+}
+.flaticon-auction:before {
+  content: "\f120";
+}
+.flaticon-information-button:before {
+  content: "\f121";
+}
+.flaticon-qr-code:before {
+  content: "\f122";
+}
+.flaticon-loupe:before {
+  content: "\f123";
+}
+.flaticon-group:before {
+  content: "\f124";
+}
+.flaticon-management:before {
+  content: "\f125";
+}
+.flaticon-credit-card:before {
+  content: "\f126";
+}

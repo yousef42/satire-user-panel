@@ -1,0 +1,65 @@
+:root {
+  --brand-purple: #966bed;
+  --brand-orange: #be464e;
+  --brand-misc: #26c0fe;
+  --brand-muted-text: #adadad;
+}
+
+body {
+  color: var(--brand-muted-text);
+}
+
+a,
+.ant-btn-link,
+.ant-typography a {
+  color: var(--brand-misc);
+}
+
+.ant-btn-primary,
+.ant-btn-color-primary.ant-btn-variant-solid {
+  background-color: var(--brand-purple);
+  border-color: var(--brand-purple);
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus,
+.ant-btn-color-primary.ant-btn-variant-solid:hover,
+.ant-btn-color-primary.ant-btn-variant-solid:focus {
+  background-color: var(--brand-purple);
+  border-color: var(--brand-purple);
+  opacity: 0.92;
+}
+
+.ant-btn-dangerous,
+.ant-btn-dangerous.ant-btn-color-default,
+.ant-btn-dangerous.ant-btn-color-primary,
+.ant-btn-dangerous.ant-btn-variant-solid {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: #fff;
+}
+
+.ant-btn-default,
+.ant-btn-color-default {
+  color: var(--brand-muted-text);
+  border-color: var(--brand-muted-text);
+}
+
+.ant-form-item-explain,
+.ant-form-item-extra,
+.ant-empty-description,
+.ant-select-selection-placeholder,
+.ant-input::placeholder,
+.ant-input-password input::placeholder,
+.ant-typography-secondary {
+  color: var(--brand-muted-text) !important;
+}
+
+button:not(.ant-btn) {
+  background-color: var(--brand-purple);
+  border: 1px solid var(--brand-purple);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.625rem 1rem;
+}

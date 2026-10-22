@@ -1,0 +1,45 @@
+$satrexBorderDarkColor: #313131;
+
+.Mui-disabled{
+  text-align: center;
+  border: none !important;
+  border-radius: 8px !important;
+  background-color: rgba(136,136,161,0.03) !important;
+  span{
+    color:#c4c4c4 !important
+  }
+  input{
+    border: 1px solid #d6d6d6 !important;
+  }
+}
+
+.appContent{
+  .Mui-disabled{
+    input{
+      border: 1px solid #d6d6d6 !important;
+    }
+  }
+  .borderNone{
+    input{
+      border: none!important;
+    }
+  }
+}
+
+.appContentDark{
+  .Mui-disabled{
+    input{
+      border: 1px solid $satrexBorderDarkColor !important;
+    }
+  }
+  .borderNone{
+    input{
+      border: none!important;
+    }
+  }
+}
+
+
+.bankInfoInputOdd{
+  background-color: rgba(219, 219, 227, 0.02) !important;
+}

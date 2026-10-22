@@ -1,0 +1,169 @@
+@use "sass:math";
+
+$previousPoint: 0;
+$previousStatus: 0;
+$redCandleTop: 0;
+$sw: 0;
+$counter: 0;
+$speed: 13;
+@for $i from 0 to 400 {
+  $displayStatus: math.random(2);
+  $randomNumber: math.random(80);
+  $reduceFirst: $randomNumber - math.random(5);
+  $reduceSecond: $randomNumber - math.random(10);
+  $reduceThird: $randomNumber - math.random(35);
+
+
+  @if $reduceFirst < 0 {
+    $reduceFirst: $reduceFirst * -1;
+  }
+
+  @if $reduceSecond < 0 {
+    $reduceSecond: $reduceSecond * -1;
+  }
+
+  @if $reduceThird < 0 {
+    $reduceThird: $reduceThird * -1;
+  }
+  .counter {
+    top: $counter;
+  }
+  .previousPoint {
+    top: $previousPoint;
+  }
+  @if ($counter >= 2) {
+    $displayStatus: 2;
+    $counter: 0;
+  }
+  @if ($counter <= -2) {
+    $displayStatus: 1;
+    $counter: 0;
+  }
+  @if ($previousPoint <= -90) {
+    $displayStatus: 1;
+  }
+  @if ($previousPoint >= 90) {
+    $displayStatus: 2;
+  }
+
+  @keyframes candleAnim#{$i} {
+    0% {
+      height: 0;
+    }
+    25% {
+      height: $reduceFirst + px;
+    }
+    50% {
+      height: $reduceSecond + px;
+    }
+    100% {
+      height: $reduceThird + px;
+    }
+  }
+
+  @keyframes candleDelayAnim#{$i} {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .redCandleDiv#{$i} {
+    top: #{-$previousPoint}px !important;
+  }
+  .greenCandleDiv#{$i} {
+    bottom: #{$previousPoint}px !important;
+  }
+  .candle#{$i} {
+    width: 100px;
+
+    @if $displayStatus == 1 {
+      display: none;
+    }
+
+    animation: candleAnim#{$i} 1s linear 1 forwards;
+    animation-delay:#{math.div($i, $speed)}s;
+  }
+
+  .candleRow#{$i} {
+    animation: candleDelayAnim#{$i} 1s linear 0s forwards;
+    animation-delay:#{math.div($i, $speed)}s;
+  }
+
+  .candleShadow#{$i} {
+    height:0;
+    @if $displayStatus == 1 {
+      display: none;
+    }
+    animation: candleShadowAnim#{$i} 1s linear 1 forwards;
+    animation-delay:#{math.div($i, $speed)}s;
+  }
+
+  @keyframes candleShadowAnim#{$i} {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: max($reduceFirst, $reduceSecond, $reduceThird) + px;
+    }
+  }
+
+  @keyframes candleGreenAnim#{$i} {
+    0% {
+      height: 0;
+    }
+    25% {
+      height: $reduceFirst + px;
+    }
+    50% {
+      height: $reduceSecond + px;
+    }
+    100% {
+      height: $reduceThird + px;
+    }
+  }
+
+  .candleGreen#{$i} {
+    width: 100px;
+    @if $displayStatus == 2 {
+      display: none;
+    }
+    animation: candleGreenAnim#{$i} 1s 1 forwards;
+    animation-fill-mode: forwards;
+
+  }
+
+  .candleGreenShadow#{$i} {
+    height:0;
+    @if $displayStatus == 2 {
+      display: none;
+    }
+    animation: candleGreenShadowAnim#{$i} 1s 1 forwards;
+    animation-fill-mode: forwards;
+    animation-delay:#{math.div($i, $speed)}s;
+  }
+
+  @keyframes candleGreenShadowAnim#{$i} {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: max($reduceFirst, $reduceSecond, $reduceThird) + px;
+    }
+  }
+
+  @if $displayStatus == 1 {
+    $counter: $counter + 1;
+    $sw: 1;
+  } @else {
+    $counter: $counter - 1;
+    $sw: 0;
+  }
+
+  @if ($sw == 0) {
+    $previousPoint: $previousPoint - $reduceThird;
+  } @else {
+    $previousPoint: $previousPoint + $reduceThird;
+  }
+}

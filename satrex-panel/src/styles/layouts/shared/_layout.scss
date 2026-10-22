@@ -1,0 +1,39 @@
+@use "../../mixins";
+@use "../../variables";
+
+.layout-full {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.layout-contained,
+.layout-boxed {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.layout-contained {
+  .container {
+    max-width: variables.$contained-layout-width;
+    margin: auto;
+    width: 100%;
+    @include mixins.media(767px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.layout-boxed {
+  max-width: variables.$contained-layout-width;
+  margin: auto;
+  box-shadow: variables.$elevation-z12;
+  background: variables.$white;
+  @include mixins.media(767px) {
+    max-width: 100%;
+    box-shadow: none;
+  }
+}

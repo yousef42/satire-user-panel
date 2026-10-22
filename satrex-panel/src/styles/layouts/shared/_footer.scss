@@ -1,0 +1,5 @@
+@use "../../variables";
+
+.footer {
+  min-height: variables.$topbar-height;
+}

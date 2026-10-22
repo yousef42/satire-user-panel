@@ -1,0 +1,29 @@
+@use "../../variables" as variables2;
+
+.layout2 {
+  .topbar {
+    position: relative;
+    width: 100%;
+    display: table;
+    height: variables2.$topbar-height;
+    border-bottom: 1px solid transparent;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 98;
+    .brand {
+      height: 100%;
+      img {
+        height: 32px;
+      }
+      .brand__text {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+      }
+    }
+
+    .MuiIconButton-root {
+      color: variables2.$white;
+    }
+  }
+}
